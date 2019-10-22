@@ -1,1 +1,118 @@
-//
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    background-color: #283139;
+}
+
+.logo {
+    text-align: center;
+    img {
+        width: 100px;
+        margin: 0 auto 40px;
+    }
+}
+
+.card {
+    border-radius: 1rem;
+}
+.card-body {
+    padding: 30px;
+}
+.title h1,
+.card-header h1 {
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(37, 37, 37);
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+}
+.title h1 {
+    font-size: 16px;
+}
+.speakers {
+    justify-content: center;
+    margin-bottom: 40px;
+    .speaker {
+        margin-right: 20px;
+        &.last {
+            margin: 0;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            transition: all 0.2s ease-in-out;
+            -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+            &:hover {
+                filter: none;
+            }
+        }
+    }
+}
+
+.comment {
+    margin-top: 20px;
+}
+
+.rate {
+    justify-content: center;
+    margin: 40px 0;
+    .fas {
+        font-size: 40px;
+        cursor: pointer;
+        &.fa-thumbs-down {
+            color: rgb(182, 84, 84);
+        }
+        &.fa-thumbs-up {
+            color: rgb(29, 155, 29);
+        }
+        &.grey {
+            color: #d9d9d9;
+        }
+    }
+    div {
+        margin-right: 20px;
+        &.last {
+            margin-right: 0;
+        }
+    }
+}
+.nope {
+    display: none;
+    &.active {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        .content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .meme {
+            text-align: center;
+            img {
+                width: 500px;
+                max-width: 80%;
+                border-radius: 15px;
+            }
+        }
+    }
+}
