@@ -2,24 +2,19 @@
 
 namespace App\Events;
 
-use Illuminate\Foundation\Events\Dispatchable;
-use Illuminate\Queue\SerializesModels;
 use App\Rating;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Foundation\Events\Dispatchable;
 
-class RatingCompleted
+final class RatingCompleted
 {
     use Dispatchable, SerializesModels;
 
-    /** @var Array $ratingData */
-    public $ratingData;
+    /** @var Rating $rating */
+    public $rating;
 
-    /**
-     * Create a new event instance.
-     *
-     * @return void
-     */
-    public function __construct(array $ratingData)
+    public function __construct(Rating $rating)
     {
-        $this->ratingData = $ratingData;
+        $this->rating = $rating;
     }
 }
