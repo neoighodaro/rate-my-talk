@@ -22,9 +22,7 @@ final class RateController extends Controller
             'rating' => 'required|in:meh,good',
         ]);
 
-        $rating = Rating::create($data);
-
-        event(new RatingCompleted($rating));
+        event(new RatingCompleted($data));
 
         return response()->json(['status' => 'success']);
     }

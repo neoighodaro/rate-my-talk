@@ -10,16 +10,16 @@ class RatingCompleted
 {
     use Dispatchable, SerializesModels;
 
-    /** @var Rating $rating */
-    public $rating;
+    /** @var Array $ratingData */
+    public $ratingData;
 
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct(Rating $rating)
+    public function __construct(array $ratingData)
     {
-        $this->rating = $rating;
+        $this->ratingData = $ratingData;
     }
 }
